@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#pokemonInfo{
+    margin-top: 20px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
