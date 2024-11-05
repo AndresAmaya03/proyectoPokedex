@@ -5,7 +5,8 @@ async function fetchPokemon() {
       return;
     }
   
-    const pokemonName = inputElement.value.toLowerCase();
+    const input = inputElement.value.toLowerCase();
+    const pokemonName = isNaN(input) ? input : String(Number(input));
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
       
     try {
