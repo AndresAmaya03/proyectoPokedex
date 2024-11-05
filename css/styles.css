@@ -1,13 +1,102 @@
+/* Reset y estilos básicos */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el encabezado */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#pokemonName {
+    width: 250px;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+#searchButton {
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Contenedor para la información del Pokémon */
+#pokemonInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 1rem;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Tarjeta de cada Pokémon */
+.pokemon-card {
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#pokemonInfo:hover {
+    transform: scale(1.05);
+}
+
+#pokemonInfo img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #eaeaea;
+}
+
+#pokemonInfo .card-body {
+    padding: 1rem;
     text-align: center;
 }
 
-#pokemonInfo{
-    margin-top: 20px;
+#pokemonInfo .pokemon-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
 }
 
-img {
-    width: 200px;
-    height: 200px;
+#pokemonInfo .pokemon-type {
+    font-size: 0.9rem;
+    color: #777;
+    text-transform: capitalize;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 576px) {
+    #pokemonName {
+        width: 100%;
+    }
+
+    #searchButton {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
 }
